@@ -19,18 +19,18 @@ Rails.application.routes.draw do
 # Uncomment to activate the resources
 ## or you can reconfigure mount_at 
 ## mount BioFake::Engine=>"your_mount_point", :as=>'your_personal_engine_name' # but is better to redefine the mount point in the Rails application.
-# yourPathToTheControllerFiles = 'foopath'
-# controllerName = :foos
+yourPathToTheControllerFiles = '/' #foopath'
+controllerName = :foos
 # otherControllerName = :samples
 ## ---
-# scope mount_at, yourPathToTheControllerFiles do    
-#   resources controllerName do #, :only => [ :index, :show, :new] do
-#     member do
-#       get :example
-#     end
-#   end
+scope mount_at, yourPathToTheControllerFiles do    
+  resources controllerName do #, :only => [ :index, :show, :new] do
+    member do
+      get :example
+    end
+  end
 #   resources otherControllerName, :only =>[:index, :show]
-# end #scope
+end #scope
 
  
 

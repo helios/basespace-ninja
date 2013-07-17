@@ -12,8 +12,10 @@ require 'bio-fake/fake.rb'
 
 require 'bio/fake/connect'
   
-
-if (defined?(Rails) && Rails::VERSION::MAJOR == 3)
+require 'json'
+require 'rinruby'
+require 'builder'
+if (defined?(Rails) ) #&& Rails::VERSION::MAJOR == 3)
   require 'bio-fake-engine'
 else
   #require the usual dependencies here
