@@ -1,0 +1,17 @@
+<table class="table table-striped table-condensed table-hover">
+<% @samples[0][0].swagger_types.keys.each do |key| %>
+
+  <th><%= key %>
+  </th>
+<% end %>
+</tr>
+<% @samples[0].each do |row|  %>
+	<tr>
+	 <% row.attributes.values.each do |value| %>
+	 <td>
+	 <%= value unless value.nil? %>
+	 </td>
+	 <%end %>
+	 </tr>
+<% end %>
+</table>

@@ -29,7 +29,8 @@ scope mount_at, yourPathToTheControllerFiles do
       get :example
     end
   end
-#   resources otherControllerName, :only =>[:index, :show]
+  resources :projects, :only =>[:index, :show]
+  resources :samples, :only =>[:index, :show]
 end #scope
 
  

@@ -9,29 +9,29 @@ class FoosController < ApplicationController
   def index
     @index = "Something relevant"
 
-    @bs = BaseSpaceAPI.start
-    @result_files = []
-    @sample_files = []
-    @results = []
-    @samples = []
-    @xm = ::Builder::XmlMarkup.new(:indent => 2)
-    projects = @bs.get_project_by_user('current')
-    projects.each do |project|
-      @results << results = project.get_app_results(@bs)
-      results.each do |result|
-        result.get_files(@bs).each do |file|
-          @result_files << file
-        end
-      end
+    # @bs = BaseSpaceAPI.start
+    # @result_files = []
+    # @sample_files = []
+    # @results = []
+    # @samples = []
+    # @xm = ::Builder::XmlMarkup.new(:indent => 2)
+    # projects = @bs.get_project_by_user('current')
+    # projects.each do |project|
+    #   @results << results = project.get_app_results(@bs)
+    #   results.each do |result|
+    #     result.get_files(@bs).each do |file|
+    #       @result_files << file
+    #     end
+    #   end
 
-      @samples << samples = project.get_samples(@bs)
-      samples.each do |sample|
-        files = sample.get_files(@bs)
-        files.each do |file|
-          @sample_files << file
-        end
-      end
-    end
+    #   @samples << samples = project.get_samples(@bs)
+    #   samples.each do |sample|
+    #     files = sample.get_files(@bs)
+    #     files.each do |file|
+    #       @sample_files << file
+    #     end
+    #   end
+    # end
 
 
 
